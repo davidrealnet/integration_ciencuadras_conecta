@@ -2,23 +2,23 @@ type: collection.insomnia.rest/5.0
 schema_version: "5.1"
 name: Integration_ciencuadras_conecta
 meta:
-  id: wrk_736a94460ef64cbd899b38956aa2b321
-  created: 1772810641344
-  modified: 1772810641344
+  id: wrk_eceeb78b93e049fc97d78452ad5678fe
+  created: 1772816931857
+  modified: 1772816931857
   description: ""
 collection:
   - name: Integration_ciencuadras_conecta
     meta:
-      id: fld_71fc2dd50ea045ba9ad41bf5fa9c8b37
+      id: fld_3fdd6ff0aab644b885820bc586883dd7
       created: 1772810641347
-      modified: 1772810641347
+      modified: 1772817776184
       sortKey: -1772810635796
       description: Colección base para importar en Insomnia/Postman, basada en
         Ciencuadras v3.9 y Conecta.
     children:
       - name: 00 - Auth
         meta:
-          id: fld_cff27227ff7e4bdb8b7798a16f39d4e8
+          id: fld_20d48fb321ac456293ac8b13f660ac69
           created: 1772810641347
           modified: 1772810641347
           sortKey: -1772810635795
@@ -27,7 +27,7 @@ collection:
           - url: "{{ws_listing_login_url}}"
             name: Ciencuadras - Login
             meta:
-              id: req_ff708dba94f94952bd27a587843e5a2e
+              id: req_52c9b6a9bf144e39aa31a9dd2731cd3d
               created: 1772810641348
               modified: 1772810641348
               isPrivate: false
@@ -55,7 +55,7 @@ collection:
           - url: "{{conecta_token_url_dev}}"
             name: Conecta - OAuth DEV
             meta:
-              id: req_2f55ff3f5efb4565a45172a31c2637da
+              id: req_46924fdf46b840c9b36e8e810c609d22
               created: 1772810641349
               modified: 1772810641349
               isPrivate: false
@@ -89,7 +89,7 @@ collection:
           - url: "{{conecta_token_url_prod}}"
             name: Conecta - OAuth PROD
             meta:
-              id: req_006aaf7f926644c29b5ea247d4242fd6
+              id: req_027bd6d5229c44a18161cb4edc5d6930
               created: 1772810641350
               modified: 1772810641350
               isPrivate: false
@@ -123,7 +123,7 @@ collection:
           - url: "{{conecta_token_url_stg}}"
             name: Conecta - OAuth STG
             meta:
-              id: req_6c647a7f3da541d79ea43dc01a00a735
+              id: req_19542c993d2043e98144bcbeda13f388
               created: 1772810641350
               modified: 1772810641350
               isPrivate: false
@@ -156,136 +156,16 @@ collection:
               rebuildPath: true
       - name: 01 - Ciencuadras WS Listing
         meta:
-          id: fld_bb1c1cec39b3442f84471d4f90b6baa0
+          id: fld_29d8440a1cf34439b7539797f9fd1e51
           created: 1772810641351
           modified: 1772810641351
           sortKey: -1772810635790
           description: ""
         children:
           - url: "{{ws_listing_base_url}}/property"
-            name: Crear inmuebles (lote)
-            meta:
-              id: req_448ff1fab48544a18378f33a06d48979
-              created: 1772810641352
-              modified: 1772810641352
-              isPrivate: false
-              description: Crea inmuebles por lote.
-              sortKey: -1772810635789
-            method: POST
-            body:
-              mimeType: application/json
-              text: >-
-                [
-                  {
-                    "cityId": 15001,
-                    "localityId": 3662,
-                    "neighborhoodName": "maria paz",
-                    "propertyTypeId": 10,
-                    "transactionTypeId": 2,
-                    "address": "Transversal 6 # 5 - 4",
-                    "showAddress": 1,
-                    "stratum": 5,
-                    "propertyCode": "{{_['property_code']}}",
-                    "latitude": 0.0,
-                    "longitude": 0.0,
-                    "sellingPrice": 0,
-                    "leasingFee": 3200000,
-                    "additionalInfo": "Publicaci\u00f3n creada desde integraci\u00f3n Odoo",
-                    "status": "A",
-                    "integrator": "{{_['integrator']}}",
-                    "advisorName": "Asesor Realnet",
-                    "advisorPhone": "+573001234567",
-                    "advisorMail": "asesor@realnet.com.co",
-                    "advisorWhatsapp": "+573001234567",
-                    "features": {
-                      "numBedRooms": 2,
-                      "numBathrooms": 2,
-                      "numParking": 1,
-                      "parkingType": 1,
-                      "privatePool": false,
-                      "antiquity": 2,
-                      "propertyName": "Apartamento demo",
-                      "remodeled": false,
-                      "project": false,
-                      "projectName": "",
-                      "administrationValue": 0,
-                      "serviceRoom": false,
-                      "serviceBathroom": false,
-                      "laundryZone": true,
-                      "floorTypes": 3,
-                      "homeAppliances": false,
-                      "chimney": false,
-                      "allowPets": true,
-                      "stoveType": 2,
-                      "heaterType": 1,
-                      "airConditioner": false,
-                      "terracesNumber": "",
-                      "terraceArea": "",
-                      "balconiesNumber": 1,
-                      "depositsNumber": 0,
-                      "lotUse": 1,
-                      "floorsNumber": 1,
-                      "apartmentsNumber": 0,
-                      "elevatorsNumber": 1,
-                      "vigilance": 2,
-                      "numParkingVisitors": 0,
-                      "reception": false,
-                      "closedCircuitTv": false,
-                      "electricPlant": false,
-                      "communalLiving": false,
-                      "childrenZone": false,
-                      "greenZones": true,
-                      "communalPool": false,
-                      "gym": false,
-                      "lotLocation": 1,
-                      "socialVenue": false,
-                      "brandNew": false,
-                      "addressComplement": "APTO 201",
-                      "realestateLogo": "logo.jpg",
-                      "furnished": false,
-                      "inConstruction": 2,
-                      "builtArea": 70,
-                      "privateArea": 65,
-                      "area": 70,
-                      "photospropertyData": [
-                        {
-                          "url": "https://example.com/photo-1.jpg",
-                          "type": "I"
-                        },
-                        {
-                          "url": "https://example.com/photo-2.jpg",
-                          "type": "I"
-                        },
-                        {
-                          "url": "https://example.com/photo-3.jpg",
-                          "type": "I"
-                        }
-                      ]
-                    }
-                  }
-                ]
-            headers:
-              - name: Content-Type
-                value: application/json
-              - name: Authorization
-                value: Bearer {{ws_listing_token}}
-            authentication:
-              type: bearer
-              disabled: false
-              token: "{{ws_listing_token}}"
-              prefix: ""
-            settings:
-              renderRequestBody: true
-              encodeUrl: true
-              followRedirects: global
-              cookies:
-                send: true
-                store: true
-              rebuildPath: true
-          - url: "{{ws_listing_base_url}}/property"
             name: Actualizar inmuebles (lote)
             meta:
-              id: req_aaf0fc3b55b9461eb990b47875a55434
+              id: req_042c4f82a9d348f0b2da6bf8aceb89e1
               created: 1772810641352
               modified: 1772810641352
               isPrivate: false
@@ -402,22 +282,108 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: "{{_['ws_listing_base_url']}}/consult-property"
-            name: Consultar inmueble por código
+          - url: "{{ws_listing_base_url}}/property"
+            name: Crear inmuebles (lote)
             meta:
-              id: req_038ad006ba754c6db54f94690f72fc66
-              created: 1772810641353
-              modified: 1772810641353
+              id: req_866b2191ad884d089b4f1a89ce1ea492
+              created: 1772810641352
+              modified: 1772810641352
               isPrivate: false
-              description: Consulta un inmueble por propertyCode.
-              sortKey: -1772810635786
+              description: Crea inmuebles por lote.
+              sortKey: -1772810635789
             method: POST
             body:
               mimeType: application/json
-              text: |-
-                {
-                  "propertyCode": "{{property_code}}"
-                }
+              text: >-
+                [
+                  {
+                    "cityId": 15001,
+                    "localityId": 3662,
+                    "neighborhoodName": "maria paz",
+                    "propertyTypeId": 10,
+                    "transactionTypeId": 2,
+                    "address": "Transversal 6 # 5 - 4",
+                    "showAddress": 1,
+                    "stratum": 5,
+                    "propertyCode": "{{_['property_code']}}",
+                    "latitude": 0.0,
+                    "longitude": 0.0,
+                    "sellingPrice": 0,
+                    "leasingFee": 3200000,
+                    "additionalInfo": "Publicaci\u00f3n creada desde integraci\u00f3n Odoo",
+                    "status": "A",
+                    "integrator": "{{_['integrator']}}",
+                    "advisorName": "Asesor Realnet",
+                    "advisorPhone": "+573001234567",
+                    "advisorMail": "asesor@realnet.com.co",
+                    "advisorWhatsapp": "+573001234567",
+                    "features": {
+                      "numBedRooms": 2,
+                      "numBathrooms": 2,
+                      "numParking": 1,
+                      "parkingType": 1,
+                      "privatePool": false,
+                      "antiquity": 2,
+                      "propertyName": "Apartamento demo",
+                      "remodeled": false,
+                      "project": false,
+                      "projectName": "",
+                      "administrationValue": 0,
+                      "serviceRoom": false,
+                      "serviceBathroom": false,
+                      "laundryZone": true,
+                      "floorTypes": 3,
+                      "homeAppliances": false,
+                      "chimney": false,
+                      "allowPets": true,
+                      "stoveType": 2,
+                      "heaterType": 1,
+                      "airConditioner": false,
+                      "terracesNumber": "",
+                      "terraceArea": "",
+                      "balconiesNumber": 1,
+                      "depositsNumber": 0,
+                      "lotUse": 1,
+                      "floorsNumber": 1,
+                      "apartmentsNumber": 0,
+                      "elevatorsNumber": 1,
+                      "vigilance": 2,
+                      "numParkingVisitors": 0,
+                      "reception": false,
+                      "closedCircuitTv": false,
+                      "electricPlant": false,
+                      "communalLiving": false,
+                      "childrenZone": false,
+                      "greenZones": true,
+                      "communalPool": false,
+                      "gym": false,
+                      "lotLocation": 1,
+                      "socialVenue": false,
+                      "brandNew": false,
+                      "addressComplement": "APTO 201",
+                      "realestateLogo": "logo.jpg",
+                      "furnished": false,
+                      "inConstruction": 2,
+                      "builtArea": 70,
+                      "privateArea": 65,
+                      "area": 70,
+                      "photospropertyData": [
+                        {
+                          "url": "https://example.com/photo-1.jpg",
+                          "type": "I"
+                        },
+                        {
+                          "url": "https://example.com/photo-2.jpg",
+                          "type": "I"
+                        },
+                        {
+                          "url": "https://example.com/photo-3.jpg",
+                          "type": "I"
+                        }
+                      ]
+                    }
+                  }
+                ]
             headers:
               - name: Content-Type
                 value: application/json
@@ -439,7 +405,7 @@ collection:
           - url: "{{_['ws_listing_base_url']}}/request-status"
             name: Consultar estado de petición
             meta:
-              id: req_31631a490c654b85898871de9141d579
+              id: req_d9001c9bf59f46d985de6d52254d2e06
               created: 1772810641353
               modified: 1772810641353
               isPrivate: false
@@ -470,10 +436,44 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
+          - url: "{{_['ws_listing_base_url']}}/consult-property"
+            name: Consultar inmueble por código
+            meta:
+              id: req_da902c1d0e074a10bf5732fa6c4284a8
+              created: 1772810641353
+              modified: 1772810641353
+              isPrivate: false
+              description: Consulta un inmueble por propertyCode.
+              sortKey: -1772810635786
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "propertyCode": "{{property_code}}"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: Bearer {{ws_listing_token}}
+            authentication:
+              type: bearer
+              disabled: false
+              token: "{{ws_listing_token}}"
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
           - url: "{{_['ws_listing_base_url']}}/deactivate-property"
             name: Desactivar inmueble
             meta:
-              id: req_70ef94a984c44ce68f166228161cf4b2
+              id: req_728f163be7cc49cf89b8a34d702ed520
               created: 1772810641354
               modified: 1772810641354
               isPrivate: false
@@ -507,7 +507,7 @@ collection:
           - url: "{{_['ws_listing_base_url']}}/active-properties"
             name: Consultar inmuebles activos por usuario
             meta:
-              id: req_71e76d2fe3244e8993c45b080aff0b8e
+              id: req_e7f96e76a45849ddabb7ea937347c5ed
               created: 1772810641354
               modified: 1772810641354
               isPrivate: false
@@ -533,7 +533,7 @@ collection:
           - url: "{{_['ws_listing_base_url']}}/delete-property"
             name: Eliminar inmueble
             meta:
-              id: req_96a5fdfcf63a4facae2709eb976c9a28
+              id: req_8535ac7bf786498cb087959c5da9f28c
               created: 1772810641355
               modified: 1772810641355
               isPrivate: false
@@ -564,28 +564,10 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: https://api-backend.ciencuadras.com/prod/request-manager/api/v1/topes/metraje
-            name: Topes de metraje
-            meta:
-              id: req_73e89a460ebb47f1aaaf73798ae4135d
-              created: 1772810641356
-              modified: 1772810641356
-              isPrivate: false
-              description: ""
-              sortKey: -1772810635781
-            method: GET
-            settings:
-              renderRequestBody: true
-              encodeUrl: true
-              followRedirects: global
-              cookies:
-                send: true
-                store: true
-              rebuildPath: true
           - url: https://api-backend.ciencuadras.com/prod/request-manager/api/v1/topes/precios
             name: Topes de precios
             meta:
-              id: req_9d9c78d304da428fa790a50aa06bde6a
+              id: req_213ebb5258304047abfcee0e5f724973
               created: 1772810641356
               modified: 1772810641356
               isPrivate: false
@@ -600,10 +582,28 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
+          - url: https://api-backend.ciencuadras.com/prod/request-manager/api/v1/topes/metraje
+            name: Topes de metraje
+            meta:
+              id: req_6de3c7ce73d24edfbe00ec368b6d3f1c
+              created: 1772810641356
+              modified: 1772810641356
+              isPrivate: false
+              description: ""
+              sortKey: -1772810635781
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
           - url: https://api-backend.ciencuadras.com/prod/request-manager/api/v1/topes/zonasinmuebles
             name: Topes de zonas por inmueble
             meta:
-              id: req_317ce81860184b98b875e9efdeaa4b9f
+              id: req_28acf1541a0148c196f71f5854044941
               created: 1772810641357
               modified: 1772810641357
               isPrivate: false
@@ -620,7 +620,7 @@ collection:
               rebuildPath: true
       - name: 02 - Conecta / Estudio de Arrendamiento
         meta:
-          id: fld_c07d4a6304244256a73fea1528d16fdb
+          id: fld_938ce753243c40af95142fbf2e041e22
           created: 1772810641358
           modified: 1772810641358
           sortKey: -1772810635779
@@ -629,7 +629,7 @@ collection:
           - url: "{{_['conecta_base_url']}}/flujo/flujo/v2/save-form"
             name: Save Form - Crear / Actualizar estudio
             meta:
-              id: req_719c1a29e68b4dcdbbd7909b12c1b307
+              id: req_2c929de8e07f4183a3bf0fdc72f4fd7b
               created: 1772810641358
               modified: 1772810641358
               isPrivate: false
@@ -712,7 +712,7 @@ collection:
           - url: "{{_['conecta_base_url']}}/flujo/flujo/v2/request-access"
             name: Request Access - OTP
             meta:
-              id: req_7f030dce06cb49cea089594ae35a0a8d
+              id: req_12af4c9c35ba403e9d0fa193166c5392
               created: 1772810641359
               modified: 1772810641359
               isPrivate: false
@@ -748,7 +748,7 @@ collection:
           - url: "{{_['conecta_base_url']}}/flujo/flujo/v2/validate-otp"
             name: Validate OTP
             meta:
-              id: req_aafee2b74d2a400cac3c9a617cfb2cb4
+              id: req_f83c2e4afb504cc6a78e64d811b72cad
               created: 1772810641359
               modified: 1772810641359
               isPrivate: false
@@ -782,10 +782,41 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
+          - url: "{{_['conecta_base_url']}}/flujo/flujo/v2/query-form?consecutive={{_['cons\
+              ecutive']}}"
+            name: Query Form
+            meta:
+              id: req_870ab10c0b8e41468ee3c2790e9ca93f
+              created: 1772810641360
+              modified: 1772810641360
+              isPrivate: false
+              description: Consulta la información del estudio.
+              sortKey: -1772810635775
+            method: GET
+            headers:
+              - name: x-api-key
+                value: "{{conecta_api_key}}"
+              - name: Authorization
+                value: Bearer {{conecta_access_token}}
+              - name: x-auth
+                value: Bearer {{x_auth}}
+            authentication:
+              type: bearer
+              disabled: false
+              token: "{{conecta_access_token}}"
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
           - url: "{{conecta_base_url}}/flujo/flujo/api/v1/solicitud/cargarDocumentosAnexos"
             name: Cargar documentos anexos
             meta:
-              id: req_34e53a8a038a4440a2469773306480cd
+              id: req_91ab3a2b6f954814b6cf45dd0c51bed1
               created: 1772810641360
               modified: 1772810641360
               isPrivate: false
@@ -826,42 +857,11 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: "{{_['conecta_base_url']}}/flujo/flujo/v2/query-form?consecutive={{_['cons\
-              ecutive']}}"
-            name: Query Form
-            meta:
-              id: req_57d52fa741404f19a43dcefc8d5acf9b
-              created: 1772810641360
-              modified: 1772810641360
-              isPrivate: false
-              description: Consulta la información del estudio.
-              sortKey: -1772810635775
-            method: GET
-            headers:
-              - name: x-api-key
-                value: "{{conecta_api_key}}"
-              - name: Authorization
-                value: Bearer {{conecta_access_token}}
-              - name: x-auth
-                value: Bearer {{x_auth}}
-            authentication:
-              type: bearer
-              disabled: false
-              token: "{{conecta_access_token}}"
-              prefix: ""
-            settings:
-              renderRequestBody: true
-              encodeUrl: true
-              followRedirects: global
-              cookies:
-                send: true
-                store: true
-              rebuildPath: true
           - url: "{{conecta_base_url}}/flujo/flujo/api/v1/solicitud/eliminarDocumentosAnexo\
               s"
             name: Eliminar documento anexo
             meta:
-              id: req_0b8bab5df3104e5c993e8d1bef057cd7
+              id: req_b15cf227c3d04524bf69a40aa4c03feb
               created: 1772810641361
               modified: 1772810641361
               isPrivate: false
@@ -899,7 +899,7 @@ collection:
           - url: "{{conecta_base_url}}/flujo/flujo/v2/ciudadSucursal?cityId=11001"
             name: Ciudad Sucursal
             meta:
-              id: req_35eef8fe666a4010b9a9675119cc72e5
+              id: req_72636400d2164d3b8c3f3d46d8c9df30
               created: 1772810641362
               modified: 1772810641362
               isPrivate: false
@@ -927,7 +927,7 @@ collection:
           - url: "{{_['conecta_base_url']}}/flujo/flujo/v2/ciudades-codazzi"
             name: Ciudades Codazzi
             meta:
-              id: req_cc4279e5d69c4c5890a79221dbca52b7
+              id: req_d775c79e368543f4a18a1731a1a4a85f
               created: 1772810641362
               modified: 1772810641362
               isPrivate: false
@@ -954,42 +954,16 @@ collection:
               rebuildPath: true
       - name: 03 - Consulta Estado de Estudio
         meta:
-          id: fld_fbba6b09f0b042ff9c6eed7ef6bc23fc
+          id: fld_8ebd9304613140d5985d9a61acc9aa9a
           created: 1772810641363
           modified: 1772810641363
           sortKey: -1772810635770
           description: ""
         children:
-          - url: https://1j52j3zbmj.execute-api.us-east-1.amazonaws.com/stage/portal/api/data/v2/solicitud/{{_['solicitud_id']}}
-            name: dataUnique - solicitud por ID
-            meta:
-              id: req_062f61b6d9964ab185586e0a88bcdc1b
-              created: 1772810641364
-              modified: 1772810641364
-              isPrivate: false
-              description: ""
-              sortKey: -1772810635769
-            method: GET
-            headers:
-              - name: Authorization
-                value: Bearer {{conecta_access_token}}
-            authentication:
-              type: bearer
-              disabled: false
-              token: "{{conecta_access_token}}"
-              prefix: ""
-            settings:
-              renderRequestBody: true
-              encodeUrl: true
-              followRedirects: global
-              cookies:
-                send: true
-                store: true
-              rebuildPath: true
           - url: https://1j52j3zbmj.execute-api.us-east-1.amazonaws.com/stage/portal/api/data/v2/obtenerSolicitudes
             name: obtenerSolicitudes - rango y estado
             meta:
-              id: req_8a13f1cba3904985a8fbfc70c922b463
+              id: req_31eba8a74d3f4dd893ec1c50f9c4e179
               created: 1772810641364
               modified: 1772810641364
               isPrivate: false
@@ -1022,9 +996,35 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
+          - url: https://1j52j3zbmj.execute-api.us-east-1.amazonaws.com/stage/portal/api/data/v2/solicitud/{{_['solicitud_id']}}
+            name: dataUnique - solicitud por ID
+            meta:
+              id: req_67efb913cf1d4edcad041b6edbb73dd8
+              created: 1772810641364
+              modified: 1772810641364
+              isPrivate: false
+              description: ""
+              sortKey: -1772810635769
+            method: GET
+            headers:
+              - name: Authorization
+                value: Bearer {{conecta_access_token}}
+            authentication:
+              type: bearer
+              disabled: false
+              token: "{{conecta_access_token}}"
+              prefix: ""
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
       - name: 99 - Notas y validaciones
         meta:
-          id: fld_5b8ea4534fa64109bf0aacd6d110da2b
+          id: fld_048894ff28b04e0082c3d7534be301ee
           created: 1772810641365
           modified: 1772810641365
           sortKey: -1772810635767
@@ -1033,7 +1033,7 @@ collection:
           - url: https://example.com/readme
             name: Notas operativas
             meta:
-              id: req_8b150c99676a4e6189394d3f7346a5d3
+              id: req_be597612c94e4575b4f33e3f1bd5ad25
               created: 1772810641365
               modified: 1772810641365
               isPrivate: false
@@ -1066,15 +1066,15 @@ collection:
 cookieJar:
   name: Default Jar
   meta:
-    id: jar_a8b1a33b6e95836f2c35c484f7166cc7dc3c973d
+    id: jar_7a696ea7b1574c98941b04b10ae0b33b
     created: 1772810641479
     modified: 1772810641479
 environments:
   name: Variables
   meta:
-    id: env_0dd08bf1590a4ec594354392c781aca7
+    id: env_d5b82d87e4d04d738a2596991f358478
     created: 1772810641366
-    modified: 1772812142599
+    modified: 1772817947512
     isPrivate: false
   data:
     ws_listing_login_url: https://dev-ws-api.ciencuadras.com/login
@@ -1086,6 +1086,7 @@ environments:
     property_code: ""
     ws_listing_request_id: ""
     conecta_token_url: ""
+    conecta_base_url: ""
     conecta_basic_auth: ""
     conecta_access_token: ""
     conecta_api_key: ""
@@ -1093,16 +1094,17 @@ environments:
     consecutive: ""
     x_auth: ""
     conecta_solicitud_id: ""
+    user_id: ""
+    property_id: ""
+    document_id: ""
     estado: ""
     fecha_inicio: 2026-01-01
     fecha_fin: 2026-01-31
     otp_code: ""
-    user_id: ""
-    document_id: ""
   subEnvironments:
     - name: dev
       meta:
-        id: env_5e086f2cf40244a4bfb2bbd4ed8c66ba
+        id: env_c7874f70d90a4255a6c6b6134c3d9cf3
         created: 1772811281223
         modified: 1772811913952
         isPrivate: true
@@ -1116,7 +1118,7 @@ environments:
       color: "#2d7e16"
     - name: stg
       meta:
-        id: env_97898094e2874f1191cfaeba90beb688
+        id: env_e5b11758f1254cb9bf3502dabfcb40a2
         created: 1772811386196
         modified: 1772811918803
         isPrivate: true
@@ -1130,7 +1132,7 @@ environments:
       color: "#d3bb22"
     - name: prod
       meta:
-        id: env_c560f5df193c465ea9c85b1f27dad424
+        id: env_982230f7668845468a3172946e962610
         created: 1772811396261
         modified: 1772811925066
         isPrivate: true
