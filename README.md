@@ -18,8 +18,8 @@ Este repositorio puede incluir archivos como:
 
 - `README.md`  
   Documento principal de guía del proyecto.
-- `insomnia-config.yml`  
-  Archivo de configuración complementario para el proyecto.
+- `insomnia-config.json`  
+  Archivo exportado desde Insomnia con la estructura del proyecto, requests, carpetas y entornos.
 - `/docs`  
   Carpeta con manuales técnicos, PDFs y documentación de referencia.
 - `/src`
